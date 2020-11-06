@@ -37,6 +37,12 @@ class EmployeeForm extends Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.setTableInput(this.state);
+    this.state = this.setState({
+      id: "",
+      name: "",
+      age: "",
+      email: ""
+    })
   }
 
   render () {
@@ -44,13 +50,13 @@ class EmployeeForm extends Component {
       <div>
         <h3>Add a new employee</h3>
         <form>
-        <input type="text" onChange={this.idChange}></input>
+        <input type="text" onChange={this.idChange} value={this.state.id}></input>
         <br/>
-        <input type="text" onChange={this.nameChange}></input>
+        <input type="text" onChange={this.nameChange} value={this.state.name}></input>
         <br/>
-        <input type="text" onChange={this.ageChange}></input>
+        <input type="text" onChange={this.ageChange} value={this.state.age}></input>
         <br/>
-        <input type="text" onChange={this.emailChange}></input>
+        <input type="text" onChange={this.emailChange} value={this.state.email}></input>
         <br />
         <button onClick= {this.handleSubmit}>Submit</button>
         <br/>

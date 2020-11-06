@@ -3,18 +3,13 @@ import React, { Component } from 'react'
 class Table extends Component {
   constructor(props) {
     super(props) 
-    this.state = { 
-      employees: [
-        { id: 1, name: 'Jeff', age: 21, email: 'Jeff@email.com' },
-        { id: 2, name: 'Emily', age: 19, email: 'Emily@email.com' },
-        { id: 3, name: 'Tony', age: 16, email: 'Tony@email.com' },
-        { id: 4, name: 'Nick', age: 25, email: 'Nick@email.com' }
-      ]
+    this.state = {
+      employees: this.props.employees 
     }
   }
   
   renderTableData() {
-    return this.state.employees.map((employees, index) => {
+    return this.props.employees.map((employees, index) => {
       const { id, name, age, email } = employees
       return (
         <tr key={id}>
@@ -28,7 +23,7 @@ class Table extends Component {
   }
 
   renderTableHeader() {
-    let header = Object.keys(this.state.employees[0])
+    let header = Object.keys(this.props.employees[0])
     return header.map((key, index) => {
       return <th key={index}>{key.toUpperCase()}</th>
     })
