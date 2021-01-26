@@ -7,13 +7,15 @@ class EmployeeForm extends Component {
       id: "",
       name: "",
       age: "",
-      email: ""
+      email: "",
+      department: ""
     }
 
     this.idChange = this.idChange.bind(this);
     this.nameChange = this.nameChange.bind(this);
     this.ageChange = this.ageChange.bind(this);
     this.emailChange = this.emailChange.bind(this);
+    this.departmentChange = this.departmentChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
 
   }
@@ -34,6 +36,10 @@ class EmployeeForm extends Component {
     this.setState({ email: e.target.value });
   }
 
+  departmentChange(e) {
+    this.setState({ department: e.target.value });
+  }
+
   handleSubmit(e) {
     e.preventDefault();
     this.props.setTableInput(this.state);
@@ -41,8 +47,10 @@ class EmployeeForm extends Component {
       id: "",
       name: "",
       age: "",
-      email: ""
+      email: "",
+      department: ""
     })
+    alert("New Employee Added!")
   }
 
   render() {
@@ -58,6 +66,8 @@ class EmployeeForm extends Component {
             <input type="text" onChange={this.ageChange} value={this.state.age} placeholder="Age"></input>
             <br/>
             <input type="text" onChange={this.emailChange} value={this.state.email} placeholder="Email"></input>
+            <br/>
+            <input type="text" onChange={this.departmentChange} value={this.state.department} placeholder="Department"></input>
             <br/>
             <button onClick={this.handleSubmit}>Submit</button>
           </div>

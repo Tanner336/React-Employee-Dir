@@ -4,7 +4,7 @@ import "./style.css";
 function Footer() {
   return (
     <footer className="footer">
-      <span>LinkedUp { new Date().getFullYear() }</span>
+      <span>The current date is: {new Date().getMonth()+1}-{new Date().getDate()}, { new Date().getFullYear() }</span>
     </footer>
   );
 }

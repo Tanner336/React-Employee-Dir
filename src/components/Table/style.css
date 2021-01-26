@@ -6,9 +6,10 @@
 .table {
   text-align: center;
   font-family: arial, sans-serif;
+  height: 100px;
   position: absolute;
-  top: 62vh;
-  left: 555px;}
+  top: 68vh;
+  left: 420px;}
 
 #employees {
   text-align: center;
