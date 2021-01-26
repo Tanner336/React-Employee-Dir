@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import "./style.css"
 
 class Table extends Component {
   constructor(props) {
@@ -16,7 +17,7 @@ class Table extends Component {
           <td>{id}</td>
           <td>{name}</td>
           <td>{age}</td>
-          <td>{email}</td>
+          <td style={{fontStyle: "italic"}}>{email}</td>
         </tr>
       )
     })
@@ -33,7 +34,7 @@ class Table extends Component {
     return (
       <div>
         <h1 id='title'>Employees</h1>
-        <table className="text-center" id='employees'>
+        <table className="table">
           <tbody>
             <tr>{this.renderTableHeader()}</tr>
             {this.renderTableData()}

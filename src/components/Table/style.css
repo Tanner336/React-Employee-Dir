@@ -3,6 +3,13 @@
   font-family: arial, sans-serif;
 }
 
+.table {
+  text-align: center;
+  font-family: arial, sans-serif;
+  position: absolute;
+  top: 62vh;
+  left: 555px;}
+
 #employees {
   text-align: center;
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;

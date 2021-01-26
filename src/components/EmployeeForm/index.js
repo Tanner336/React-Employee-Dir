@@ -2,12 +2,12 @@ import React, { Component } from 'react'
 
 class EmployeeForm extends Component {
   constructor(props) {
-    super(props) 
-    this.state = { 
-      id: "ID",
-      name: "Name",
-      age: "Age",
-      email: "Email"
+    super(props)
+    this.state = {
+      id: "",
+      name: "",
+      age: "",
+      email: ""
     }
 
     this.idChange = this.idChange.bind(this);
@@ -18,20 +18,20 @@ class EmployeeForm extends Component {
 
   }
 
-  idChange(e){
-    this.setState({id: e.target.value });
+  idChange(e) {
+    this.setState({ id: e.target.value });
   }
 
-  nameChange(e){
-    this.setState({name: e.target.value });
+  nameChange(e) {
+    this.setState({ name: e.target.value });
   }
 
-  ageChange(e){
-    this.setState({age: e.target.value });
+  ageChange(e) {
+    this.setState({ age: e.target.value });
   }
 
-  emailChange(e){
-    this.setState({email: e.target.value });
+  emailChange(e) {
+    this.setState({ email: e.target.value });
   }
 
   handleSubmit(e) {
@@ -45,21 +45,22 @@ class EmployeeForm extends Component {
     })
   }
 
-  render () {
+  render() {
     return (
       <div>
         <h3>Add a new employee</h3>
         <form>
-        <input type="text" onChange={this.idChange} value={this.state.id}></input>
-        <br/>
-        <input type="text" onChange={this.nameChange} value={this.state.name}></input>
-        <br/>
-        <input type="text" onChange={this.ageChange} value={this.state.age}></input>
-        <br/>
-        <input type="text" onChange={this.emailChange} value={this.state.email}></input>
-        <br />
-        <button onClick= {this.handleSubmit}>Submit</button>
-        <br/>
+          <div>
+            <input type="text" onChange={this.idChange} value={this.state.id} placeholder="ID"></input>
+            <br/>
+            <input type="text" onChange={this.nameChange} value={this.state.name} placeholder="Name"></input>
+            <br/>
+            <input type="text" onChange={this.ageChange} value={this.state.age} placeholder="Age"></input>
+            <br/>
+            <input type="text" onChange={this.emailChange} value={this.state.email} placeholder="Email"></input>
+            <br/>
+            <button onClick={this.handleSubmit}>Submit</button>
+          </div>
         </form>
       </div>
     )
