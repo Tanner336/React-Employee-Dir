@@ -10,8 +10,8 @@ Need to install React to use locally.
 
 ## Usage
 This website would be used as a jumping off point for an employee directory. The fields add in the specific information to the list below, and they can be sorted by age.
-![EmployeeDir-screenshot](./assets/employeeDir.png)
-![EmployeeDir-screenshot](./assets/employeeDir.gif)
+![EmployeeDir-screenshot](/assets/employeeDir.png)
+![EmployeeDir-screenshot](/assets/employeeDir.gif)
 
 ## Contribution Guidelines
 If you would like to contribute, all you need is to confirm with myself and to make sure that you leave the project better than when you found it.
